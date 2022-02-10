@@ -16,35 +16,29 @@ body {
 }
 
 .main-items {
-    height: 65vh;
+    height: 575px;
     width: 70vw;
     margin: auto;
     border-radius: 15px;
     display: flex;
     align-items: center;
     background-color: #fff;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -1400% 70%;
      -webkit-box-shadow: -4px 15px 21px -5px rgba(77,56,161,0.77), -4px 38px 21px -5px rgba(83,61,173,0.41); 
     box-shadow: -4px 15px 21px -5px rgba(77,56,161,0.77), -4px 38px 21px -5px rgba(83,61,173,0.41);
-    position: relative;
 }
 
-.accordion {
-    margin: 10px 20px;
-    padding-right: 80px;
-    width: 40vw;
-    height: 45vh;
-
-   
-}
 
 h1 {
     text-align: left;
+    padding-bottom: 30px;
 }
 
 .preview-space {
     width: 30vw;
     height: auto;
-    background-color: aqua;
     margin: 30px;
 }
 
@@ -52,15 +46,74 @@ h1 {
     position: absolute;
     left: 130px;
     top: 225px;
-    z-index: 1;
-    overflow: hidden;
 }
+
 .box {
     position: absolute;
-      left: 125px;
-      bottom: 270px;
-    z-index: 2;
+    left: 125px;
+    bottom: 270px;
 }
+
+.accordion {
+    margin: 0 0 20px 20px;
+    padding-right: 80px;
+    padding-top: 70px;
+    width: 40vw;
+    height: 575px;
+    position: relative;
+}
+
+.accordion-item {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.item-header {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    transition: 0.2s ease-out;
+
+}
+
+.item-header:hover {
+    color: #F47C57;
+    cursor: pointer;
+
+}
+
+.item-header::after{
+    content: url(images/icon-arrow-down.svg);
+    position: absolute;
+    right: 6rem;
+    transition: 0.2s ease-out;
+    transition: font-weight 1s ease-in-out;
+
+
+
+}
+
+.item-header.active::after {
+    content: url(images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+
+}
+.item-header.active {
+   font-weight: 600;
+   transition:  1s ease-out;
+
+}
+
+.item-body {
+    max-height: 0px;
+    overflow: hidden;
+    margin: 20px 0;
+    font-size: 1rem;
+    border-bottom: solid 1px hsl(240, 5%, 91%);
+    transition:  0.5s ease-out;
+}
+
+
 
 
 
